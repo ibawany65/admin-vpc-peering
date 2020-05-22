@@ -3,7 +3,7 @@ provider "aws" {
   region     = var.region
 }
 
-provider "aws"{
+provider "aws" {
   alias      ="eu"
   region     = "eu-centrail -1"
 }
@@ -48,6 +48,7 @@ data "aws_vpc" "requestor" {
   count = var.enabled ? 1 : 0
   id    = var.requestor_vpc_id
   tags  = var.requestor_vpc_tags
+  provider = aws
 }
 
 # Lookup acceptor VPC so that we can reference the CIDR
@@ -55,6 +56,7 @@ data "aws_vpc" "acceptor" {
   count = var.enabled ? 1 : 0
   id    = var.acceptor_vpc_id
   tags  = var.acceptor_vpc_tags
+  provider = aws.eu
 }
 
 data "aws_route_tables" "requestor" {
