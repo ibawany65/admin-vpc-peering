@@ -1,12 +1,12 @@
-variable "region" {
-  type        = string
-  default     = "us-west-1"
-}
-
 variable "enabled" {
   type        = bool
   default     = true
   description = "Set to false to prevent the module from creating or accessing any resources"
+}
+
+variable "region" {
+  type        = string
+  default     = "us-west-1"
 }
 
 variable "namespace" {
