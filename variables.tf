@@ -1,3 +1,8 @@
+variable "region" {
+  type        = string
+  default     = "us-west-1"
+}
+
 variable "enabled" {
   type        = bool
   default     = true
