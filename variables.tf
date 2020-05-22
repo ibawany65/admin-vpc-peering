@@ -1,3 +1,9 @@
+variable "acceptor_vpc_tags" {
+  type        = map(string)
+  description = "Acceptor VPC tags"
+  default     = {}
+}
+
 variable "enabled" {
   type        = bool
   default     = true
@@ -60,12 +66,6 @@ variable "acceptor_vpc_id" {
   type        = string
   description = "Acceptor VPC ID"
   default     = ""
-}
-
-variable "acceptor_vpc_tags" {
-  type        = map(string)
-  description = "Acceptor VPC tags"
-  default     = {}
 }
 
 variable "auto_accept" {
