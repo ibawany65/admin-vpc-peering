@@ -1,11 +1,11 @@
 
 provider "aws" {
-  region     = var.region
+  region     = "us-west-1"
 }
 
 provider "aws" {
   alias      ="eu"
-  region     = "eu-centrail -1"
+  region     = "eu-central-1"
 }
 
 module "label" {
