@@ -40,6 +40,7 @@ variable "tags" {
 }
 
 variable "requestor_vpc_id" {
+  region      = "us-west-1"
   type        = string
   description = "Requestor VPC ID"
   default     = ""
@@ -52,6 +53,7 @@ variable "requestor_vpc_tags" {
 }
 
 variable "acceptor_vpc_id" {
+  region      = "eu-central-1"
   type        = string
   description = "Acceptor VPC ID"
   default     = ""
